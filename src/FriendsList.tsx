@@ -1,4 +1,4 @@
-import React from 'react';
+
 import Friend from './Friend';
 
 export interface FriendValidation {

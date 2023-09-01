@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function FormSplitBill() {
   return (
     <form className="form-split-bill">

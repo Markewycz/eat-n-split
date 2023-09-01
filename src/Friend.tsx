@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { FriendValidation } from './FriendsList';
 import Button from './Button';
 
