@@ -1,10 +1,10 @@
-
-import { FriendValidation } from './FriendsList';
+import { FriendsTypes } from './App';
 import Button from './Button';
 
-interface FriendProps {
-  friend: FriendValidation;
-}
+// tu tak samo importuje to i musze to dac typ
+type FriendProps = {
+  friend: FriendsTypes;
+};
 
 export default function Friend({ friend }: FriendProps) {
   return (

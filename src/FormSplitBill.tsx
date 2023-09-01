@@ -3,14 +3,14 @@ export default function FormSplitBill() {
     <form className="form-split-bill">
       <h2>Split a bill with $friend</h2>
 
-      <label>💰 Bill value</label>
-      <input type="text" />
-      <label>🧍‍♂️ Your expense</label>
-      <input type="text" />
-      <label>👩🏾‍🤝‍🧑🏿 $friend expense</label>
-      <input type="text" disabled />
-      <label htmlFor="">🤑 Who is paying the bill?</label>
-      <select>
+      <label htmlFor="billValue">💰 Bill value</label>
+      <input id="billValue" type="text" />
+      <label htmlFor="yourExpense">🧍‍♂️ Your expense</label>
+      <input id="yourExpense" type="text" />
+      <label htmlFor="friendExpense">👩🏾‍🤝‍🧑🏿 $friend expense</label>
+      <input id="friendExpense" type="text" disabled />
+      <label htmlFor="whoPays">🤑 Who is paying the bill?</label>
+      <select id="whoPays">
         <option value="user">You</option>
         <option value="friend">$Friend</option>
       </select>
