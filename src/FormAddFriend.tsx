@@ -2,7 +2,7 @@ import Button from './Button';
 import React from 'react';
 import { useState } from 'react';
 
-// Czy importowanie tych typow to dobra praktyka czy da sie inaczej jakos to zrobic bo nie bierze automatycznie przypisanego typu w app.tsx 
+// Czy importowanie tych typow to dobra praktyka czy da sie inaczej jakos to zrobic bo nie bierze automatycznie przypisanego typu w app.tsx
 import { FriendsTypes } from './App';
 
 type FormAddFriendProps = {
@@ -20,7 +20,7 @@ export default function FormAddFriend({ onAddFriend }: FormAddFriendProps) {
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
-    if (!name || !image) return;
+    // if (!name || !image) return;
 
     const id: string = crypto.randomUUID();
     const newFriend = {
@@ -30,7 +30,7 @@ export default function FormAddFriend({ onAddFriend }: FormAddFriendProps) {
       balance: 0,
     };
 
-    onAddFriend(newFriend);
+    onAddFriend(newFriend);   
     setName('');
     setImage('https://i.pravatar.cc/48');
   }

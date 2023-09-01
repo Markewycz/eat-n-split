@@ -6,7 +6,6 @@ type ButtonProps = {
 export default function Button({ children, onClick }: ButtonProps) {
   return (
     <button
-      type="button"
       className="button"
       // czy trzeba tego guarda tak robic
       onClick={onClick ? () => onClick() : () => {}}

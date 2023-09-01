@@ -4,11 +4,19 @@ import Button from './Button';
 // tu tak samo importuje to i musze to dac typ
 type FriendProps = {
   friend: FriendsTypes;
+  selectedFriend: FriendsTypes | null;
+  onSelection: (friend?: FriendsTypes) => void;
 };
 
-export default function Friend({ friend }: FriendProps) {
+export default function Friend({
+  friend,
+  selectedFriend,
+  onSelection,
+}: FriendProps) {
+  const isSelected = selectedFriend?.id === friend.id;
+
   return (
-    <li>
+    <li className={isSelected ? 'selected' : ''}>
       <img src={friend.image} alt={friend.name} />
       <h3>{friend.name}</h3>
 
@@ -24,7 +32,9 @@ export default function Friend({ friend }: FriendProps) {
         <p className="">You and {friend.name} are even!</p>
       ) : null}
 
-      <Button>Select</Button>
+      <Button onClick={() => onSelection(friend)}>
+        {isSelected ? 'Close' : 'Select'}
+      </Button>
     </li>
   );
 }

@@ -25,13 +25,24 @@ import { FriendsTypes } from './App';
 // tu tak samo importuje
 type FriendsListProps = {
   friends: FriendsTypes[];
+  selectedFriend: FriendsTypes | null;
+  onSelection: () => void;
 };
 
-export default function FriendsList({ friends }: FriendsListProps) {
+export default function FriendsList({
+  friends,
+  selectedFriend,
+  onSelection,
+}: FriendsListProps) {
   return (
     <ul>
       {friends.map(friend => (
-        <Friend key={friend.id} friend={friend} />
+        <Friend
+          key={friend.id}
+          friend={friend}
+          selectedFriend={selectedFriend}
+          onSelection={onSelection}
+        />
       ))}
     </ul>
   );
