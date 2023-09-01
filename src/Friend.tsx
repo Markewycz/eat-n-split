@@ -5,7 +5,7 @@ import Button from './Button';
 type FriendProps = {
   friend: FriendsTypes;
   selectedFriend: FriendsTypes | null;
-  onSelection: (friend?: FriendsTypes) => void;
+  onSelection: (friend: FriendsTypes) => void;
 };
 
 export default function Friend({
@@ -32,7 +32,7 @@ export default function Friend({
         <p className="">You and {friend.name} are even!</p>
       ) : null}
 
-      <Button onClick={() => onSelection(friend)}>
+      <Button onClick={() => onSelection?.(friend)}>
         {isSelected ? 'Close' : 'Select'}
       </Button>
     </li>
