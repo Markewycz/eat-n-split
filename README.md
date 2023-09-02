@@ -1,1 +1,1 @@
-# eat-n-splitt
+# eat-n-split
